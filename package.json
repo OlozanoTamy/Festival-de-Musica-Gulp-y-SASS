@@ -1,18 +1,15 @@
 {
   "name": "repo_festival-de-musica",
   "version": "1.0.0",
-  "description": "Este es un proyecto de desarrollo para un festival de musica",
+  "description": "Esta es un aplicacion web para desarrollar un sitio web de un festival de musica",
   "main": "index.js",
-  "scripts":{
-    "sass": "sass --watch src/scss:build/css"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [
-    "Gulp",
-    "SASS"
+    "SASS",
+    "GULP"
   ],
-  "author": "Oscar Lozano Tamy",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.70.0"
-  }
+  "author": "Oscar Lozano",
+  "license": "ISC"
 }
-
