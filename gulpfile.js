@@ -6,23 +6,26 @@ function tarea(done){
 exports.primerTarea = tarea;
 
 
-const { watch } = require("fs");   //Llama las apis de estas dependencias
-const { src , dest } = require("gulp");
-const sass = require("gulp-sass") (require("sass")); //Comunica sass con gulp npm i -d gulp-sass
 
-function css( done ){
-    src("src/scss/app.scss") //Identificar el archivo de SASS
-        .pipe(sass()) //Compilarlo
-        .pipe(dest("build/css"))
-        
+const { src, dest, watch } = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+//Compilar el sass a css
+function css(done){
+//    console.log("Compilando SASS...");
+    //Identificar el archivo .scss a compilar
+    src("src/scss/app.scss") //Aquí está el cambio que hice
+            .pipe( sass() ) // Compilarlo
+            .pipe( dest("build/css")); // Almacenarlo
+    
     done();
 }
 
-
-
-function dev( cv ){
-    watch("src/scss/app.scss", css);
-    cv();
+function dev(done){
+    
+    watch("src/scss/**/*.scss", css);
+    
+    done();
 }
+
 exports.css = css;
 exports.dev = dev;
