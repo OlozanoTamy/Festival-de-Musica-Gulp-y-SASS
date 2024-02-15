@@ -1,0 +1,43 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.header {
+  background-color: v.$verde;
+  h1 {
+    color: v.$blanco;
+    text-align: center;
+    @include m.tablet {
+      //Sirve para traer los mixins donde previamente configure media query
+      margin: 0;
+    }
+  }
+  .contenido-header {
+    @include m.tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.navegacion-principal {
+  padding: 2rem;
+  @include m.tablet {
+    display: flex;
+    gap: 2rem;
+  }
+  a {
+    color: v.$blanco;
+    font-size: 2.4rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include m.tablet {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: v.$amarillo;
+    }
+  }
+}
+//Mixing es unas pieza de codigo que se puerde reutilizar
