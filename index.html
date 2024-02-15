@@ -24,5 +24,33 @@
         </div><!--Contenedor-->
     </header>
     
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & EDM Festival</h2>
+                <p>Julio 2024, Bogota, Colombia</p>
+            </div><!--Contenido-video-->
+        </div><!--overlay-->
+        <video autoplay muted loop><!--Sirve para reproducir automaticamente el video y mute para que arranque el video en silencio, cuando finaliza vuelve a arrancar-->
+            <source src="video/concierto.mp4" type="video/mp4"><!--El video en mp4 debe ser el primero-->
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div><!--video-->
+    
+    <section class="contenedor sobre-festival">
+        <div class="imagen">
+            <img src="build/img/imagen_vocalista.webp" alt="imagen vocalista festival">
+        </div><!--Imagen-->
+        <div class="contenido-festival">
+            <h2>Rock & EDM Festival</h2>
+            <p class="fecha">24 de Julio de 2024</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus laboriosam, accusantium, iusto animi obcaecati inventore eligendi optio voluptate dicta nostrum cupiditate velit cum aliquid recusandae ad blanditiis beatae magni!</p>
+        </div><!--contenido-festival-->
+    </section><!--Sobre-festival-->
+
+    
+
 </body>
 </html>
